@@ -33,9 +33,8 @@ public class MainActivity extends Activity {
 				R.dimen.image_thumbnail_size);
 		mImageThumbSpacing = getResources().getDimensionPixelSize(
 				R.dimen.image_thumbnail_spacing);
-		mPhotoWall = (GridView) findViewById(R.id.photo_wall);
-		mAdapter = new PhotoWallAdapter(this, 0, Images.imageThumbUrls,
-				mPhotoWall);
+		mPhotoWall = findViewById(R.id.photo_wall);
+		mAdapter = new PhotoWallAdapter(this, 0, Images.imageThumbUrls, mPhotoWall);
 		mPhotoWall.setAdapter(mAdapter);
 		mPhotoWall.getViewTreeObserver().addOnGlobalLayoutListener(
 				new ViewTreeObserver.OnGlobalLayoutListener() {
